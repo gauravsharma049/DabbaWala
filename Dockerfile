@@ -6,5 +6,5 @@ RUN mvn clean package
 FROM openjdk:17-jdk-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar /app/dabbawala.jar
-EXPOSE 8080
+EXPOSE 80
 ENTRYPOINT ["java","-jar","/app/dabbawala.jar"]
