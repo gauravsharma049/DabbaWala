@@ -31,7 +31,7 @@ public class DabbaWalaRestController {
     @Autowired
     private DabbaWalaService dabbaWalaService;
     @GetMapping("")
-    public List<Resturant> getAllResturants(){
+    public List<Resturant> getAllResturants(){ 
         return dabbaWalaService.getAllResturants();
     }
     @GetMapping("/country/{keyword}")  
