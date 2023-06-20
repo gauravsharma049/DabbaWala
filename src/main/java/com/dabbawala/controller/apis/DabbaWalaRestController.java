@@ -84,9 +84,9 @@ public class DabbaWalaRestController {
         return dabbaWalaService.getResturantByResturantName(keyword);
     }
 
-    @PostMapping("/add-resturant")
-    public Resturant addResturant(@RequestBody Resturant resturant) {
-        return dabbaWalaService.addResturant(107, resturant);
+    @PostMapping("/add-resturant/{ownerId}")
+    public Resturant addResturant(@RequestBody Resturant resturant, @PathVariable("ownerId") int id) {
+        return dabbaWalaService.addResturant(id, resturant);
     }
 
     @PostMapping("/add-owner")
